@@ -30,13 +30,11 @@ export default function CountryList() {
         (item?.name?.toLowerCase().includes(globalFilter.toLowerCase()) ||
           item?.capital?.toLowerCase().includes(globalFilter.toLowerCase()) ||
           item?.region?.toLowerCase().includes(globalFilter.toLowerCase())) &&
-        item?.name?.toLowerCase().includes(nameFilter.toLowerCase()) &&
-        item?.capital?.toLowerCase().includes(capitalFilter.toLowerCase()) &&
-        item?.region?.toLowerCase().includes(regionFilter.toLowerCase())
+        item?.capital?.toLowerCase().includes(capitalFilter.toLowerCase())
     );
     setselectedPage(0);
     setlist(filterdata || []);
-  }, [globalFilter, data, nameFilter, capitalFilter, regionFilter]);
+  }, [globalFilter, data, capitalFilter]);
 
   return (
     <div className="CountryList container-fluid">
