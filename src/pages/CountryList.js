@@ -9,9 +9,7 @@ export default function CountryList() {
 
   const [globalFilter, setglobalFilter] = useState("");
 
-  const [nameFilter, setNamefilter] = useState("");
   const [capitalFilter, setcapitalfilter] = useState("");
-  const [regionFilter, setregionfilter] = useState("");
 
   useEffect(() => {
     servicesCountries.countries().then((responseData) => {
